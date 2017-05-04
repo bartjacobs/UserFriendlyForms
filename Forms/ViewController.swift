@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
 
+    @IBOutlet var saveButton: UIButton!
+
+    @IBOutlet var textFields: [UITextField]!
+
     @IBOutlet var passwordValidationLabel: UILabel!
 
     // MARK: - View Life Cycle
@@ -26,13 +30,38 @@ class ViewController: UIViewController {
 
         // Setup View
         setupView()
+
+        // Register View Controller as Observer
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: Notification.Name.UITextFieldTextDidChange, object: nil)
     }
 
     // MARK: - View Methods
 
     fileprivate func setupView() {
+        // Configure Save Button
+        saveButton.isEnabled = false
+
         // Configure Password Validation Label
         passwordValidationLabel.isHidden = true
+    }
+
+    // MARK: - Notification Handling
+
+    @objc private func textDidChange(_ notification: Notification) {
+        var formIsValid = true
+
+        for textField in textFields {
+            // Validate Text Field
+            let (valid, _) = validate(textField)
+
+            guard valid else {
+                formIsValid = false
+                break
+            }
+        }
+        
+        // Update Save Button
+        saveButton.isEnabled = formIsValid
     }
 
     // MARK: - Helper Methods

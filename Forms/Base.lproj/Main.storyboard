@@ -92,6 +92,11 @@
                         <outlet property="lastNameTextField" destination="ZJ4-1f-V0d" id="FtN-vc-CVp"/>
                         <outlet property="passwordTextField" destination="90X-eF-lp8" id="sfP-Mt-Fad"/>
                         <outlet property="passwordValidationLabel" destination="wg3-Q3-UV7" id="D7N-W0-4r8"/>
+                        <outlet property="saveButton" destination="oTz-6n-3rn" id="Z4c-zy-Boj"/>
+                        <outletCollection property="textFields" destination="Tfv-2t-3h6" collectionClass="NSMutableArray" id="3PD-Bb-lfU"/>
+                        <outletCollection property="textFields" destination="90X-eF-lp8" collectionClass="NSMutableArray" id="fBp-rv-8He"/>
+                        <outletCollection property="textFields" destination="ZJ4-1f-V0d" collectionClass="NSMutableArray" id="3vU-Wu-puF"/>
+                        <outletCollection property="textFields" destination="IQz-qe-CMf" collectionClass="NSMutableArray" id="iV4-4L-7Q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

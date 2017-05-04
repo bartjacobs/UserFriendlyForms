@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mso-Rd-iJx">
-                                <rect key="frame" x="16" y="28" width="343" height="210.5"/>
+                                <rect key="frame" x="16" y="28" width="343" height="234.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttp-bE-xQn">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -57,8 +57,14 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="q8b-Sb-3Xg"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg3-Q3-UV7">
+                                        <rect key="frame" x="0.0" y="142.5" width="343" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="1" green="0.37254902719999999" blue="0.35686275360000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tfv-2t-3h6">
-                                        <rect key="frame" x="0.0" y="142.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="166.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
@@ -67,7 +73,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-6n-3rn">
-                                        <rect key="frame" x="0.0" y="180.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="204.5" width="343" height="30"/>
                                         <state key="normal" title="Save"/>
                                     </button>
                                 </subviews>
@@ -85,6 +91,7 @@
                         <outlet property="firstNameTextField" destination="IQz-qe-CMf" id="Wfb-x9-K1M"/>
                         <outlet property="lastNameTextField" destination="ZJ4-1f-V0d" id="FtN-vc-CVp"/>
                         <outlet property="passwordTextField" destination="90X-eF-lp8" id="sfP-Mt-Fad"/>
+                        <outlet property="passwordValidationLabel" destination="wg3-Q3-UV7" id="D7N-W0-4r8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

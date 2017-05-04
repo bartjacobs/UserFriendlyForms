@@ -18,3 +18,22 @@ class ViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     
 }
+
+extension ViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case firstNameTextField:
+            lastNameTextField.becomeFirstResponder()
+        case lastNameTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            emailTextField.becomeFirstResponder()
+        default:
+            emailTextField.resignFirstResponder()
+        }
+        
+        return true
+    }
+
+}
